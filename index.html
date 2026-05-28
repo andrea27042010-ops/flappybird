@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Bird Original Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="ui-score">0</div>
+        <button id="btn-pause" class="hidden">PAUSA</button>
+        
+        <div id="tap-hint">TOCCA o SPAZIO PER SALTARE<br>e Iniziare</div>
+        
+        <div id="bird">
+            <div id="bird-tail"></div>
+            <div id="bird-wing"></div>
+            <div id="bird-beak"></div>
+        </div>
+
+        <div id="device-screen" class="screen">
+            <h1>FLAPPY BIRD</h1>
+            <p id="best-score-display" style="color: #f7d117; font-size: 1.3rem; font-weight: bold; margin-bottom: 20px;">Record: 0</p>
+            <button id="btn-pc">Computer (Schermo Intero)</button>
+            <button id="btn-mobile">Cellulare</button>
+        </div>
+
+        <div id="registration-screen" class="screen hidden">
+            <h1>NUOVO GIOCATORE</h1>
+            <input type="text" id="username-input" placeholder="Nickname" maxlength="15">
+            <button id="btn-register">Salva e Gioca</button>
+            <button id="btn-back-device" style="background: #555; box-shadow: 0 4px 0 #333; font-size: 0.9rem;">Indietro</button>
+        </div>
+
+        <div id="pause-screen" class="screen hidden" style="background: rgba(0,0,0,0.85);">
+            <h1>PAUSA</h1>
+            <p id="pause-current-score" style="font-size: 1.6rem; margin-bottom: 20px; color: #fff;">Punteggio: 0</p>
+            <button id="btn-resume">Riprendi</button>
+        </div>
+
+        <div id="gameover-screen" class="screen hidden">
+            <h1>GAME OVER</h1>
+            <div id="new-record-tag" class="hidden">NUOVO RECORD</div>
+            <p id="final-score" style="font-size: 1.8rem; font-weight: bold; margin-bottom: 15px;">Punteggio: 0</p>
+            
+            <div style="margin-bottom: 15px;">
+                <button id="btn-restart">Rigioca</button>
+                <button id="btn-home">Home</button>
+            </div>
+            
+            <div class="leaderboard-header">
+                <h3 style="color: #f7d117;">TOP 5 CAMPIONI</h3>
+            </div>
+            <div class="leaderboard-box" id="leaderboard-content"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
